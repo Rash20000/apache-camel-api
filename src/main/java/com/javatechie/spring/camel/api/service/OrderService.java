@@ -7,27 +7,27 @@ import javax.annotation.PostConstruct;
 
 import org.springframework.stereotype.Service;
 
-import com.javatechie.spring.camel.api.dto.Order;
+import com.javatechie.spring.camel.api.model.ModelOder;
 
 @Service
 public class OrderService {
 
-	private List<Order> list = new ArrayList<>();
+	private List<ModelOder> list = new ArrayList<>();
 
 	@PostConstruct
 	public void initDB() {
-		list.add(new Order(67, "Mobile", 5000));
-		list.add(new Order(89, "Book", 400));
-		list.add(new Order(45, "AC", 15000));
-		list.add(new Order(67, "Shoes", 4000));
+		list.add(new ModelOder(67, "Mobile", 5000));
+		list.add(new ModelOder(89, "Book", 400));
+		list.add(new ModelOder(45, "AC", 15000));
+		list.add(new ModelOder(67, "Shoes", 4000));
 	}
 
-	public Order addOrder(Order order) {
-		list.add(order);
-		return order;
+	public ModelOder addOrder(ModelOder modelOder) {
+		list.add(modelOder);
+		return modelOder;
 	}
 
-	public List<Order> getOrders() {
+	public List<ModelOder> getOrders() {
 		return list;
 	}
 

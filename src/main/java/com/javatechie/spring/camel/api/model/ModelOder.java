@@ -1,4 +1,4 @@
-package com.javatechie.spring.camel.api.dto;
+package com.javatechie.spring.camel.api.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Order {
+public class ModelOder {
 	
 	private int id;
 	private String name;
